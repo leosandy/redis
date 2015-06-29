@@ -77,8 +77,8 @@ public class RedisLock {
 			e.printStackTrace();
 		}
 		if(lock){
-			this.jedis.del(lockKey);
 			this.lock = false;
+			this.jedis.del(lockKey);
 		}
 	}
 	
